@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#🚀 Công nghệ sử dụng
 
-## Getting Started
+- Next.js 15/16 (Latest): Sử dụng App Router và Turbopack cho tốc độ tối ưu.
+- TypeScript: Cấu hình nghiêm ngặt để đảm bảo an toàn về kiểu dữ liệu.
+- Tailwind CSS v4: Framework CSS mới nhất cho giao diện linh hoạt.
+- TanStack Query (React Query): Quản lý state và caching dữ liệu từ server.
+- Zustand: Quản lý Global State một cách nhẹ nhàng.
+- JWT Auth: Hệ thống xác thực sử dụng JWT với jose (Edge-compatible) và Next.js Middleware.
+- Shadcn/ui: Đã cài đặt và tích hợp các component cơ bản (Button, Input, Card, Form).
 
-First, run the development server:
+📂 Cấu trúc dự án nổi bật
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- src/lib/auth.ts
+  : Xử lý Encrypt/Decrypt JWT và quản lý Session qua Cookies.
+- src/middleware.ts
+  : Bảo vệ các route (/dashboard, /profile) yêu cầu đăng nhập.
+- src/lib/store.ts
+  : Zustand store quản lý trạng thái User và Token phía client.
+- src/lib/react-query-provider.tsx
+  : Client Provider cung cấp QueryClient cho toàn app.
+- src/app/login/page.tsx
+  : Giao diện đăng nhập hoàn chỉnh với Shadcn logic.
+- src/app/api/auth/login: API handler xử lý đăng nhập và thiết lập Session.
