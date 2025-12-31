@@ -13,14 +13,14 @@ export function HeaderHotSearches() {
       <div className="w-[160px] shrink-0"></div>
 
       <div className="flex-1 max-w-2xl px-2">
-        <div className="hidden lg:flex gap-4 text-[11px] font-medium text-blue-50/80 overflow-x-auto no-scrollbar">
-          {topSearches.map((tag) => (
+        <div className="hidden lg:flex flex-wrap gap-4 text-[11px] font-medium text-blue-50/80">
+          {topSearches.slice(0, 5).map((tag) => (
             <button
               key={tag}
               onClick={() =>
                 router.push(`/search?q=${encodeURIComponent(tag)}`)
               }
-              className="whitespace-nowrap hover:text-white transition-colors"
+              className="hover:text-white transition-colors"
             >
               {tag}
             </button>

@@ -75,7 +75,7 @@ export function HeaderSearchPopup({
                 Tra cứu hàng đầu
               </h3>
               <div className="flex flex-wrap gap-2">
-                {topSearches.map((term, idx) => (
+                {topSearches.slice(0, 5).map((term, idx) => (
                   <button
                     key={idx}
                     onClick={() => handleSearch(term)}

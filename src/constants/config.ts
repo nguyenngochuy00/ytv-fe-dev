@@ -1,6 +1,6 @@
 export const ODOO_CONFIG = {
   URL:
-    process.env.NEXT_PUBLIC_ODOO_URL || "https://c29b92f1c760.ngrok-free.app/",
+    process.env.NEXT_PUBLIC_ODOO_URL || "https://3864f4e18070.ngrok-free.app",
   DB: process.env.NEXT_PUBLIC_ODOO_DB || "admin_251217",
 } as const;
 

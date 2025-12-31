@@ -11,7 +11,7 @@ function getTopSearchesFromStorage(): string[] {
 
     return Object.entries(counts)
       .sort(([, a], [, b]) => b - a)
-      .slice(0, 10)
+      .slice(0, 5)
       .map(([term]) => term);
   } catch (error) {
     console.error("Error parsing search counts:", error);
